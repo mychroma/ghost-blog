@@ -1,0 +1,7 @@
+FROM ghost:5
+
+USER root
+RUN npm install pg --prefix /var/lib/ghost/versions/5.130.6
+USER node
+
+CMD ["node", "current/index.js"]
