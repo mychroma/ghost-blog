@@ -1,7 +1,7 @@
 FROM ghost:4
 
 USER root
-RUN npm install pg --prefix /var/lib/ghost/versions/5.130.6 --legacy-peer-deps
+RUN cd /var/lib/ghost/versions/4.48.9 && npm install pg --legacy-peer-deps
 USER node
 
 CMD ["node", "current/index.js"]
